@@ -3,102 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Kya </title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio de Kya</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-    <h1>Présentation</h1>
-    <p>Bienvenue sur mon portfolio</p>
-    <p>Je suis Kya, j'ai 36 ans et je suis en reconversion professionnelle de développement web et web mobile </p>
-    <p>Le monde de l'informatique m'a toujours attiré et j'ai choisi d'abord de faire ce métier car j'aime créer et résoudre des problèmatiques.</p>
-    <p>J'aime la technologie et j'aime apprendre en continue.</p>
-    <p>Je veux continuer dans le secteur informatique en effectuant une alternance à la suite de ma formation de développeur web et web mobile.</p>
-    <p>Je suis à la recherche d'une entreprise qui me permettra de mettre en pratique mes compétences et de continuer à apprendre dans ce domaine .</p>
-    <p>Je vais donc vous présenter mes compétences et mes projets réalisés durant ma formation.</p>
+        <h1>Présentation</h1>
+        <p>Bienvenue sur mon portfolio !</p>
     </header>
-<nav>
-    <ul>
-        <li><a href="#Apprentissage">Apprentissage en cours</a></li>
-        <li><a href="#Expériences">Expériences professionnelles</a></li>
-        <li><a href="#Diplômes">Diplômes et formations</a></li>       
-        <li><a href="#Projet">Projet à venir </a></li>
-    </ul>
-</nav>
-<main class="bento-grid">
 
-    <section id="Apprentissage" class="bento-card">
-      
-    <h2>Compétences Front-end</h2>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Responsive Design</li>
-        <li>Figma</li>
-    </ul>
-    <h2>Compétences Back-end</h2>
-    <ul>
-        <li>Python</li>
-        <li>PHP</li>
-        <li>MVC</li>  
-        <li>Node.js</li>    
-        <li>MySQL</li> 
-        <li>Initiation NoSQL</li>
-        <li>API REST</li>
-        <li>SEO</li>                       
-    </ul>
-    <h2>Gestion de projet</h2>
-    <ul>
-        <li>Méthodes Agiles</li>
-        <li>Cahier des charges</li> 
-        <li>Git/Github</li>
-        <li>Communication et travail en équipe</li>
-        <li>Test et validation</li> 
-        <li>Déploiement(FTP, Docker, CI/CD)</li> 
-    </ul>                
-</section>
-<section id="Expériences" class="bento-card">
-    <h2>Expériences professionnelles</h2>
+    <div class="dossier-container">
+       
+        <nav class="dossier-navigation">
+            <button class="intercalaire active" data-tab="presentation">Présentation</button>
+            <button class="intercalaire" data-tab="competences">Compétences en développement web et web mobile</button>
+            <button class="intercalaire" data-tab="experiences">Expériences professionnelles</button>
+            <button class="intercalaire" data-tab="diplomes">Diplômes et Formations</button>
+            <button class="intercalaire" data-tab="projets">Projets à venir</button>
+        </nav>
 
-    <ul>
-        <li>Econome dans une MECS durant 1 an</li>
-        <li>Secrétaire des resssources humaines dans une MECS pendant 1 mois</li>
-        <li>Aide soignante en MAS durant 3 mois</li>
-        <li>Assistante de direction et assistante administrative dans le groupe à caractère médico-sociale durant 10 mois</li>
-        <li>Secrétaire dans une association médico-sociale durant 4 mois</li>
-        <li>Aide soignante en intérim et vacation dans diverse établissement médicaux sociaux durant 5 mois</li>
-        <li>Secrétaire d'accueil en Ehpad durant 14 ans</li>
-    </ul>
-</section>
+        <div class="dossier-contenu">
+            
+            <div class="fiche-dossier active" id="presentation">
+                <p>Je suis Kya, j'ai 36 ans et je suis actuellement en reconversion professionnelle pour devenir développeuse web et web mobile.</p>
+                <p>Attirée depuis toujours par l'informatique, j'ai choisi ce métier pour le plaisir de créer et de résoudre des problématiques concrètes. J'aime la technologie et j'adore apprendre en continu.</p>
+                <p>Mon objectif ? Intégrer une entreprise en alternance à la suite de ma formation afin de mettre en pratique mes compétences et continuer à progresser sur le terrain.</p>
+                <p>Découvrez ci-dessous mes compétences, mon parcours et mes projets.</p>
+            </div>
 
-<section id="Diplômes" class="bento-card">
+            <div class="fiche-dossier" id="competences">  
+                <div class="bento-grid"> 
+                    <div class="bento-card">
+                        <h2>Compétences Front-end</h2>
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Responsive Design</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
 
-    <h2>Formation : </h2>
-    <ul>
-        <li>Développeur web et web mobile à l'école - en cours</li>
-    </ul>
-    
-    <h2>Diplôme : </h2>
-    <ul>
-        <li>Diplôme d'Etat d'aide soignante</li>
-        <li>Secrétaire médicale</li>
-        <li>Baccalauréat professionnel Secrétariat</li>
-    </ul>
-</section>
+                    <div class="bento-card">
+                        <h2>Compétences Back-end</h2>
+                        <ul>
+                            <li>Python</li>
+                            <li>PHP (Architecture MVC)</li>  
+                            <li>Node.js</li>    
+                            <li>MySQL / Initiation NoSQL</li>
+                            <li>API REST</li>
+                            <li>SEO</li>                       
+                        </ul>
+                    </div>
 
-<section id="Projet" class="bento-card">
-<h2>Projet à venir</h2>
-    <p>Planning interactif : Automatisation des salariés absences et présent dans un établissement.</p>
-    <p>Formulaire  automatique : Simplification des accès aux données des salariés</p>
-<p>Je prévois de créer un formulaire automatique qui simplifie le processus de collecte des données pour les utilisateurs. Ce projet me permettra de mettre en pratique mes compétences en développement web et
-   
-<footer>
+                    <div class="bento-card">
+                        <h2>Gestion de projet & Outils</h2>
+                        <ul>
+                            <li>Méthodes Agiles</li>
+                            <li>Rédaction de cahier des charges</li> 
+                            <li>Git / GitHub</li>
+                            <li>Communication & travail en équipe</li>
+                            <li>Tests & validation</li> 
+                            <li>Déploiement (FTP, Docker, CI/CD)</li> 
+                        </ul>                
+                    </div>
+                </div> 
+            </div> <div class="fiche-dossier" id="experiences">
+                <h2>Expériences professionnelles</h2>
+                <ul>
+                    <li><strong>Secrétaire d'accueil en Ehpad</strong> (14 ans)</li>
+                    <li><strong>Assistante de direction & administrative</strong> - Secteur médico-social (10 mois)</li>
+                    <li><strong>Économe en MECS</strong> (1 an)</li>
+                    <li><strong>Aide-soignante</strong> en MAS et intérim (8 mois)</li>
+                    <li><strong>Secrétaire RH & associative</strong> - Secteur médico-social (5 mois)</li>
+                </ul>
+            </div>
 
-<h2>Contact</h2>
-    <p>Vous pouvez me contacter par email à l'adresse suivante : <a href="mailto:        >   
-              
-</footer>
+            <div class="fiche-dossier" id="diplomes">
+                <h3>Formations</h3>
+                <ul>
+                    <li>Développeur web et web mobile (En cours)</li>
+                </ul>
+                <h3>Diplômes</h3>
+                <ul>
+                    <li>Baccalauréat professionnel Secrétariat</li>
+                    <li>Titre professionnel Secrétaire médicale</li>
+                    <li>Diplôme d'État d'Aide-soignante</li>
+                </ul>
+            </div>
+
+            <div class="fiche-dossier" id="projets">
+                <h2>Projets à venir</h2>
+                
+                <h3>Planning interactif</h3>
+                <p>Automatisation de la gestion des absences et des présences des salariés au sein d'un établissement.</p>
+                
+                <h3>Formulaire automatique</h3>
+                <p>Simplification des accès aux données des salariés. Ce projet me permettra de mettre en pratique mes compétences en développement web et en gestion de base de données.</p>
+            </div>  
+
+        </div> </div> <footer>
+        <h2>Contact</h2>
+        <p>Vous souhaitez échanger sur mon profil ou me proposer une alternance ? Contacte-moi par email :</p>
+        <p><a href="mailto:ton.adresse@email.com">ton.adresse@email.com</a></p>   
+    </footer>
+
+    <script src="script.js"></script>
 </body> 
-</html>             
+</html>
