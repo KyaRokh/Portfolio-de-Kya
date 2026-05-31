@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const onglets = document.querySelectorAll(".intercalaire");
     const fiches = document.querySelectorAll(".fiche-dossier");
+    const onglets = document.querySelectorAll(".intercalaire");
 
     onglets.forEach(onglet => {
         onglet.addEventListener("click", function() {
-            onglets.forEach(o => o.classList.remove("active"));
+     
             fiches.forEach(f => f.classList.remove("active"));
-            onglet.classList.add("active");
-            const cible = onglet.getAttribute("data-tab");
-            const ficheCible = document.getElementById(cible);
-            if (ficheCible) {
-                ficheCible.classList.add("active");
+            
+            const ficheParente = onglet.parentElement;
+            if (ficheParente) {
+                ficheParente.classList.add("active");
             }
         });
     });

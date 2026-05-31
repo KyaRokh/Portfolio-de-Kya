@@ -9,106 +9,112 @@
 <body>
 
     <header>
-        <h1>Présentation</h1>
-        <p>Bienvenue sur mon portfolio !</p>
+        <h1>Bienvenue sur mon portfolio !</h1>
     </header>
 
-    <div class="dossier-container">
+    <div class="dossier-contenu">
        
-        <nav class="dossier-navigation">
-            <button class="intercalaire active" data-tab="presentation">Présentation</button>
-            <button class="intercalaire" data-tab="competences">Compétences en développement web et web mobile</button>
-            <button class="intercalaire" data-tab="experiences">Expériences professionnelles</button>
-            <button class="intercalaire" data-tab="diplomes">Diplômes et Formations</button>
+        <div id="presentation" class="fiche-dossier active">
+            <button class="intercalaire" data-tab="presentation">Présentation</button>
+            <h2>Présentation</h2>
+            <p>Bonjour, je suis Kya,</p>
+            <p>J'ai travaillé plus de 15 ans dans l'administratif et j'ai toujours voulu travailler dans l'informatioque.</p> 
+            <p>C'est pourquoi aujourd'hui à 36 ans, je suis actuellement en reconversion professionnelle pour devenir développeuse web et web mobile.</p>
+            <p>Je suis attirée depuis toujours par l'informatique et j'ai choisi ce métier pour le plaisir de créer et de résoudre des problématiques concrètes.</p>
+            <p>Je souhaiterai intégrer une entreprise en alternance à la suite de ma formation afin de mettre en pratique mes compétences et continuer à progresser dans un secteur qui me correspond.</p>
+            <p>Je fais actuellement ma reconversion au sein du centre de formation Oravendise. Je vais donc dans ce portfolio vous présenter mes compétences en cours d'apprentissage, mes expériencs et diplômes passés, mes softs skills ainsi que les projets que je souhaite réaliser à l'avenir.</p>  
+                 
+        </div>
+
+        <div id="competences" class="fiche-dossier">
+            <button class="intercalaire" data-tab="competences">Compétences en DWWM</button>
+            <h2>Compétences en Front-End</h2>
+            <ul>
+                <li>HTML5 / CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Responsive Design</li>
+                <li>Figma</li>
+            </ul>
+    
+            <h2>Compétences en Back-end (en cours d'apprentissage)</h2>
+            <ul>
+                <li>Python</li>
+                <li>PHP (Architecture MVC)</li>  
+                <li>Node.js</li>    
+                <li>MySQL / Initiation NoSQL</li>
+                <li>API REST</li>
+                <li>SEO</li>                       
+            </ul>
+       
+            <h2>Gestion de projet & Outils</h2>
+            <ul>
+                <li>Méthodes Agiles</li>
+                <li>Rédaction de cahier des charges</li> 
+                <li>Git / GitHub</li>
+                <li>Communication & travail en équipe</li>
+                <li>Tests & validation</li> 
+                <li>Déploiement (FTP, Docker, CI/CD)</li> 
+            </ul>                
+        </div>
+           
+        <div id="experiences" class="fiche-dossier">
+            <button class="intercalaire" data-tab="experiences">Expériences et diplômes</button>
+            <h2>Expériences professionnelles</h2>
+            <ul>
+                    <li>2025 : Econome - Secteur médico-social </li>
+                    <li>2024 : Secrétaire des ressources humaines - Secteur médico-social</li>
+                    <li>2024 :  Aide-soignante en MAS</li>  
+                    <li>2023-2024 : Secrétaire de direction et administrative - Secteur médico-social</li>
+                    <li>2022-2023 : Secrétaire médicale - Secteur hospitalier</li>
+                    <li>2022 : Aide soignante mission d'interim et vacation</li>
+                    <li>2007-2021 : Secrétaire d'accueil en EHPAD</li>
+                </ul>    
+
+
+            <h3>Formations</h3>
+            <ul>
+                <li>2026 : Développeur web et web mobile (En cours)</li>
+            </ul>
+            <h3>Diplômes</h3>
+            <ul>
+                <li>2022 : Diplôme d'État d'Aide-soignante</li>
+                <li>2011 : Titre professionnel Secrétaire médicale</li>
+                <li>2009 : Baccalauréat professionnel Secrétariat</li>
+                
+                
+            </ul>
+        </div>
+
+        <div id="softskills" class="fiche-dossier">
+            <button class="intercalaire" data-tab="softskills">Soft skills</button>
+            <h2>Soft skills</h2>
+            <ul>
+                <li>Gestion du stress et adaptabilité - Gestion de projets, respect des deadlines</li>
+                <li>Rigueur et sens de l'organisation - Ecoute et travail en équipe</li>
+                <li>Résilicience et résolution de problèmes - Bugs et imprévus</li>
+                <li>Esprit d'équipe et communication transversale - </li>
+                <li>Empathie et sens du service</li>
+                <li>Curiosité et autonomie</li>
+                
+            </ul>
+        </div>
+
+        <div id="projets" class="fiche-dossier">
             <button class="intercalaire" data-tab="projets">Projets à venir</button>
-        </nav>
-
-        <div class="dossier-contenu">
             
-            <div class="fiche-dossier active" id="presentation">
-                <p>Je suis Kya, j'ai 36 ans et je suis actuellement en reconversion professionnelle pour devenir développeuse web et web mobile.</p>
-                <p>Attirée depuis toujours par l'informatique, j'ai choisi ce métier pour le plaisir de créer et de résoudre des problématiques concrètes. J'aime la technologie et j'adore apprendre en continu.</p>
-                <p>Mon objectif ? Intégrer une entreprise en alternance à la suite de ma formation afin de mettre en pratique mes compétences et continuer à progresser sur le terrain.</p>
-                <p>Découvrez ci-dessous mes compétences, mon parcours et mes projets.</p>
-            </div>
+            <h2>Planning interactif</h2>
+            <p>Automatisation de la gestion des absences et des présences des salariés au sein d'un établissement.</p>
+            
+            <h2>Formulaire automatique</h2>
+            <p>Simplification des accès aux données des salariés. Ce projet me permettra de mettre en pratique mes compétences en développement web et en gestion de base de données.</p>
+        </div>  
 
-            <div class="fiche-dossier" id="competences">  
-                <div class="bento-grid"> 
-                    <div class="bento-card">
-                        <h2>Compétences Front-end</h2>
-                        <ul>
-                            <li>HTML5 / CSS3</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Responsive Design</li>
-                            <li>Figma</li>
-                        </ul>
-                    </div>
-
-                    <div class="bento-card">
-                        <h2>Compétences Back-end</h2>
-                        <ul>
-                            <li>Python</li>
-                            <li>PHP (Architecture MVC)</li>  
-                            <li>Node.js</li>    
-                            <li>MySQL / Initiation NoSQL</li>
-                            <li>API REST</li>
-                            <li>SEO</li>                       
-                        </ul>
-                    </div>
-
-                    <div class="bento-card">
-                        <h2>Gestion de projet & Outils</h2>
-                        <ul>
-                            <li>Méthodes Agiles</li>
-                            <li>Rédaction de cahier des charges</li> 
-                            <li>Git / GitHub</li>
-                            <li>Communication & travail en équipe</li>
-                            <li>Tests & validation</li> 
-                            <li>Déploiement (FTP, Docker, CI/CD)</li> 
-                        </ul>                
-                    </div>
-                </div> 
-            </div> <div class="fiche-dossier" id="experiences">
-                <h2>Expériences professionnelles</h2>
-                <ul>
-                    <li><strong>Secrétaire d'accueil en Ehpad</strong> (14 ans)</li>
-                    <li><strong>Assistante de direction & administrative</strong> - Secteur médico-social (10 mois)</li>
-                    <li><strong>Économe en MECS</strong> (1 an)</li>
-                    <li><strong>Aide-soignante</strong> en MAS et intérim (8 mois)</li>
-                    <li><strong>Secrétaire RH & associative</strong> - Secteur médico-social (5 mois)</li>
-                </ul>
-            </div>
-
-            <div class="fiche-dossier" id="diplomes">
-                <h3>Formations</h3>
-                <ul>
-                    <li>Développeur web et web mobile (En cours)</li>
-                </ul>
-                <h3>Diplômes</h3>
-                <ul>
-                    <li>Baccalauréat professionnel Secrétariat</li>
-                    <li>Titre professionnel Secrétaire médicale</li>
-                    <li>Diplôme d'État d'Aide-soignante</li>
-                </ul>
-            </div>
-
-            <div class="fiche-dossier" id="projets">
-                <h2>Projets à venir</h2>
-                
-                <h3>Planning interactif</h3>
-                <p>Automatisation de la gestion des absences et des présences des salariés au sein d'un établissement.</p>
-                
-                <h3>Formulaire automatique</h3>
-                <p>Simplification des accès aux données des salariés. Ce projet me permettra de mettre en pratique mes compétences en développement web et en gestion de base de données.</p>
-            </div>  
-
-        </div> </div> <footer>
+    </div> <footer>
         <h2>Contact</h2>
         <p>Vous souhaitez échanger sur mon profil ou me proposer une alternance ? Contacte-moi par email :</p>
         <p><a href="mailto:ton.adresse@email.com">ton.adresse@email.com</a></p>   
     </footer>
-
     <script src="script.js"></script>
-</body> 
-</html>
+</body>
+</html> 
