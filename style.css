@@ -1,108 +1,313 @@
-/* --- 1. CONFIGURATION GLOBALE --- */
+/* 1. POLICES & CONFIGURATION GLOBALE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght=400;500&family=Space+Grotesk:wght=700&display=swap');
+
 body {
-    background-color: white;
+    background-color: #f2e2ca;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 25px 25px;
     margin: 0;
     padding: 0;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
 }
 
-h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 30px;
+h1.header-slogan {
+    font-family: 'Space Grotesk', sans-serif;
+    color: black;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Polices */
+h2, h3, .intercalaire {
+    font-family: 'Space Grotesk', sans-serif;
     color: black;
 }
 
-/* --- 2. LE CLASSEUR & LES FEUILLES --- */
-.dossier-contenu {
-    position: relative;
-    max-width: 80%;
-    margin: 100px auto 40px auto;
-    background-color: white;
+p, table, .marche p, footer {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Cadres néo-brutalistes */
+.dossier-contenu, .intercalaire, .marche {
     border: 2px solid black;
-    border-radius: 6px 12px 12px 12px;
+}
+
+/* 2. CLASSEUR */
+.classeur-global {
+    max-width: 1200px;      
+    width: 90%;
+    margin: 100px auto 40px auto;
+    position: relative;
+}
+
+.dossier-contenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 0 12px 12px 12px;
     box-shadow: 6px 6px 0px black;
-    min-height: 700px;
+    z-index: 2;
+    position: relative;
+    height: 750px;          
 }
 
 .fiche-dossier {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 50px 40px 50px;
+    grid-area: 1 / 1; 
+    padding: 50px 60px;
     box-sizing: border-box;
-    text-align: left;
+    display: none; 
+    background-color: white;
+    border-radius: 0 12px 12px 12px;
+    height: 100%;           
+    overflow-y: auto;       
+    text-align: center;     
 }
 
-/* --- 3. ALIGNEMENT DU TEXTE --- */
-.fiche-dossier h2, 
-.fiche-dossier h3, 
-.fiche-dossier p, 
-.fiche-dossier ul {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin-top: 20px;
+.fiche-dossier.active {
+    display: block;
+}
+
+/* Titres de sections */
+.fiche-dossier h2 { 
+    font-size: 28px; 
+    text-align: center; 
+    text-decoration: underline; 
+    text-underline-offset: 5px;s
+    margin-bottom: 35px;
+}
+
+/* Titres de sous-sections */
+.fiche-dossier h3 {
+    font-size: 22px;
+    text-align: center;
     margin-bottom: 15px;
-    display: none; /* Caché par défaut */
 }
 
-.fiche-dossier h2 { font-size: 20px; color: black; text-align: center; text-decoration: underline; }
-.fiche-dossier p { font-size: 15px; }
-.fiche-dossier ul { padding-left: 20px; }
-
-/* 🟢 Unification stricte du haut : supprime la marge du tout premier élément */
-.fiche-dossier h2:first-of-type,
-.fiche-dossier p:first-of-type,
-.fiche-dossier ul:first-of-type {
-    margin-top: 0 !important;
-}
-
-/* --- 4. LOGIQUE D'AFFICHAGE  --- */
-.fiche-dossier.active h2, 
-.fiche-dossier.active p, 
-.fiche-dossier.active ul, 
-.fiche-dossier.active h3 {
-    display: block; /* Visible quand la fiche est active */
-}
-
-/* --- 5. LES BOUTONS INTERCALAIRES --- */
-.intercalaire {
+/* 3. BARRE D'ONGLETS */
+.barre-intercalaires {
+    display: flex;
     position: absolute;
-    top: -42px;
+    top: -38px; left: 0; width: 100%; 
+    padding: 0;
+    z-index: 1;
+}
+
+.intercalaire {
     height: 40px;
-    width: 23%;
+    flex: 1;                
+    min-width: 0;           
     box-sizing: border-box;
-    border: 2px solid black;
-    border-bottom: none;
-    border-radius: 8px 8px 0px 0px;
-    background-color: #d5d5d5;
+    border-radius: 8px 8px 0 0; 
+    margin-right: -5px;     
     font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 11px;        
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease-in-out;
+    padding: 0 4px;         
 }
 
-.intercalaire:hover { background-color: #ddd; }
+.intercalaire:last-child {
+    margin-right: 0;
+}
 
-/* --- 6. PLACEMENT & COULEURS DES ONGLETS --- */
-#presentation .intercalaire  { left: 1%; }
-#competences .intercalaire   { left: 20%; }
-#experiences .intercalaire   { left: 40%; }
-#softskills .intercalaire    { left: 60%; }
-#projets .intercalaire       { left: 75%; }
+/* Animations au survol */
+.intercalaire:hover:not(.active) { 
+    transform: translateY(-4px); 
+    box-shadow: 0px 4px 0px purple; 
+}
 
-#presentation.active .intercalaire  { background-color: #fbfba8; z-index: 10; }
-#competences.active .intercalaire   { background-color: #a8defb; z-index: 10; }
-#experiences.active .intercalaire   { background-color: #a8fba8; z-index: 10; }
-#softskills.active .intercalaire    { background-color: #fba8a8; z-index: 10; }
-#projets.active .intercalaire       { background-color: #dfa8fb; z-index: 10; }
+.intercalaire:active { transform: translateY(1px); }
+.intercalaire:focus-visible { outline: 3px dashed black; outline-offset: 2px; }
+
+/* Couleurs des onglets */
+.intercalaire[data-tab="presentation"] { background-color: #fbfba8; }
+.intercalaire[data-tab="competences"]  { background-color: #b8def5; }
+.intercalaire[data-tab="experiences"]  { background-color: #b8f5b8; }
+.intercalaire[data-tab="softskills"]   { background-color: #f5b8b8; }
+.intercalaire[data-tab="projets"]      { background-color: #dfb8f5; }
+
+/* États Actifs */
+.intercalaire.active {
+    z-index: 3; 
+    transform: translateY(2px); 
+    height: 42px; 
+    border-bottom: 2px solid transparent; 
+}
+.intercalaire.active[data-tab="presentation"] { background-color: #fbfba8; }
+.intercalaire.active[data-tab="competences"]  { background-color: #a8defb; }
+.intercalaire.active[data-tab="experiences"]  { background-color: #a8fba8; }
+.intercalaire.active[data-tab="softskills"]   { background-color: #fba8a8; }
+.intercalaire.active[data-tab="projets"]      { background-color: #dfa8fb; }
+
+/* 4. PAGES INTERNES (MISES EN PAGE SPÉCIFIQUES) */
+
+/* --- Tableau --- */
+.tableau-competences {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.tableau-competences th, .tableau-competences td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+.tableau-competences th {
+    background-color: #a8defb;
+}
+
+/* --- Escalier --- */
+.escalier-experiences, .escalier-diplomes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.marche {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: white;
+    border: 3px solid #07d607; 
+    box-shadow: 4px 4px 0px black;
+    width: 75%;
+    justify-content: center;
+}
+.annee { font-weight: bold; color: purple; min-width: 90px; }
+.marche p { margin: 0; font-size: 14px; text-align: center; }
+
+/* Décalages progressifs des escaliers : */
+.m1 { margin-left: -25%; }
+.m2 { margin-left: -15%; }
+.m3 { margin-left: -5%; }
+.m4 { margin-left: 5%; }
+.m5 { margin-left: 15%; }
+.m6 { margin-left: 25%; } 
+
+/* --- Page Soft Skills  --- */
+.texte-introduction {
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+}
+
+.liste-softskills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.liste-softskills-container .softskills {
+    width: 60%;               
+    max-width: 500px;
+    background-color: #ffffff; 
+    border: 3px solid #fba8a8;  
+    border-radius: 8px;       
+    padding: 15px 20px;       
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;       
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px black; 
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.liste-softskills-container .softskills:hover {
+    transform: translateY(-2px);
+    background-color: #f9f9f9; 
+}
+
+/* --- Page Projets --- */
+.projets-centralises {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.bloc-projet-simple {
+    margin-bottom: 40px;
+}
+.bloc-projet-simple p { font-size: 16px; margin-top: 0; }
+
+/* 5. CONFIGURATION DU FOOTER & FORMULAIRE */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.mini-form {
+    max-width: 350px;
+    margin: 20px auto 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.mini-form input, .mini-form textarea, .mini-form button {
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid black; 
+    font-family: 'Inter', sans-serif;
+}
+
+.mini-form button {
+    background: hsl(61, 100%, 50%); 
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px black; 
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.mini-form button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px black;
+}
+
+/* 6. RESPONSIVE DESIGN (Écrans < 768px) */
+@media screen and (max-width: 768px) {
+    .classeur-global { 
+        max-width: 95%; 
+        margin: 80px auto 20px auto; 
+    }
+    
+    .dossier-contenu {
+        height: auto; 
+        min-height: 500px;
+    }
+
+    .fiche-dossier {
+        padding: 20px 15px;
+        height: auto;
+    }
+    
+    .marche { 
+        width: 100%; 
+        margin-left: 0 !important; 
+    } 
+    
+    .liste-softskills-container .softskills {
+        width: 90%; 
+    }
+    
+    .tableau-competences {
+        display: block;
+        overflow-x: auto; 
+    }
+}

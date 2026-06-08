@@ -3,118 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Kya</title>
+    <title>Portfolio de Kya - Secteur numérique</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenue sur mon portfolio !</h1>
-    </header>
+<header>
+    <h1 class="header-slogan">Bienvenue sur mon portfolio !</h1>
+</header>
+
+<main class="classeur-global">
+    <nav class="barre-intercalaires" role="tablist" aria-label="Sections du portfolio">
+        <button id="tab-presentation" class="intercalaire active" role="tab" aria-selected="true" aria-controls="presentation" data-tab="presentation">Présentation</button>
+        <button id="tab-competences" class="intercalaire" role="tab" aria-selected="false" aria-controls="competences" data-tab="competences" tabindex="-1">Compétences en DWWM</button>
+        <button id="tab-experiences" class="intercalaire" role="tab" aria-selected="false" aria-controls="experiences" data-tab="experiences" tabindex="-1">Expériences et diplômes</button>
+        <button id="tab-softskills" class="intercalaire" role="tab" aria-selected="false" aria-controls="softskills" data-tab="softskills" tabindex="-1">Soft skills</button>
+        <button id="tab-projets" class="intercalaire" role="tab" aria-selected="false" aria-controls="projets" data-tab="projets" tabindex="-1">Projets</button>
+    </nav>
 
     <div class="dossier-contenu">
-       
-        <div id="presentation" class="fiche-dossier active">
-            <button class="intercalaire" data-tab="presentation">Présentation</button>
+        
+        <!-- SECTION : PRÉSENTATION -->
+        <section id="presentation" class="fiche-dossier active" role="tabpanel" aria-labelledby="tab-presentation">
             <h2>Présentation</h2>
             <p>Bonjour, je suis Kya,</p>
-            <p>J'ai travaillé plus de 15 ans dans l'administratif et j'ai toujours voulu travailler dans l'informatioque.</p> 
-            <p>C'est pourquoi aujourd'hui à 36 ans, je suis actuellement en reconversion professionnelle pour devenir développeuse web et web mobile.</p>
-            <p>Je suis attirée depuis toujours par l'informatique et j'ai choisi ce métier pour le plaisir de créer et de résoudre des problématiques concrètes.</p>
-            <p>Je souhaiterai intégrer une entreprise en alternance à la suite de ma formation afin de mettre en pratique mes compétences et continuer à progresser dans un secteur qui me correspond.</p>
-            <p>Je fais actuellement ma reconversion au sein du centre de formation Oravendise. Je vais donc dans ce portfolio vous présenter mes compétences en cours d'apprentissage, mes expériencs et diplômes passés, mes softs skills ainsi que les projets que je souhaite réaliser à l'avenir.</p>  
-                 
-        </div>
+            <p>Après avoir travaillé plus de 15 ans dans l'administratif, j'ai choisi de concrétiser mon envie de rejoindre le secteur du numérique.</p>
+            <p>Actuellement en formation de développeuse web et web mobile, je développe des compétences techniques pour accompagner des projets digitaux.</p>
+            <p>J'ai choisi cette voie pour le plaisir de créer, de coordonner et de résoudre des problématiques concrètes.</p>
+            <p>Par la suite, je souhaiterais intégrer une entreprise en alternance afin de continuer à progresser dans un secteur qui me correspond.</p>
+            <p>Merci de l'attention que vous apporterez à ma page !</p>
+        </section>
 
-        <div id="competences" class="fiche-dossier">
-            <button class="intercalaire" data-tab="competences">Compétences en DWWM</button>
-            <h2>Compétences en Front-End</h2>
-            <ul>
-                <li>HTML5 / CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Responsive Design</li>
-                <li>Figma</li>
-            </ul>
-    
-            <h2>Compétences en Back-end (en cours d'apprentissage)</h2>
-            <ul>
-                <li>Python</li>
-                <li>PHP (Architecture MVC)</li>  
-                <li>Node.js</li>    
-                <li>MySQL / Initiation NoSQL</li>
-                <li>API REST</li>
-                <li>SEO</li>                       
-            </ul>
-       
-            <h2>Gestion de projet & Outils</h2>
-            <ul>
-                <li>Méthodes Agiles</li>
-                <li>Rédaction de cahier des charges</li> 
-                <li>Git / GitHub</li>
-                <li>Communication & travail en équipe</li>
-                <li>Tests & validation</li> 
-                <li>Déploiement (FTP, Docker, CI/CD)</li> 
-            </ul>                
-        </div>
+        <!-- SECTION : COMPÉTENCES -->
+        <section id="competences" class="fiche-dossier" role="tabpanel" aria-labelledby="tab-competences" hidden>
+            <h2>Compétences Techniques</h2>
+            <table class="tableau-competences">
+                <thead>
+                    <tr>
+                        <th scope="col">Compétences Front-End</th>
+                        <th scope="col">Compétences Back-End (En cours)</th>
+                        <th scope="col">Gestion & Outils</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5 / CSS3</td>
+                        <td>PHP</td>
+                        <td>Git / GitHub</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Node.js</td>
+                        <td>Méthodes Agiles</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>Python</td>
+                        <td>Cahier des charges</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td>MySQL</td>
+                        <td>Tests & Validation</td>
+                    </tr>
+                    <tr>
+                        <td>Figma</td>
+                        <td>API REST / SEO</td>
+                        <td>Docker / CI-CD (Notions)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
            
-        <div id="experiences" class="fiche-dossier">
-            <button class="intercalaire" data-tab="experiences">Expériences et diplômes</button>
+        <!-- SECTION : EXPÉRIENCES ET DIPLÔMES -->
+        <section id="experiences" class="fiche-dossier" role="tabpanel" aria-labelledby="tab-experiences" hidden>
             <h2>Expériences professionnelles</h2>
-            <ul>
-                    <li>2025 : Econome - Secteur médico-social </li>
-                    <li>2024 : Secrétaire des ressources humaines - Secteur médico-social</li>
-                    <li>2024 :  Aide-soignante en MAS</li>  
-                    <li>2023-2024 : Secrétaire de direction et administrative - Secteur médico-social</li>
-                    <li>2022-2023 : Secrétaire médicale - Secteur hospitalier</li>
-                    <li>2022 : Aide soignante mission d'interim et vacation</li>
-                    <li>2007-2021 : Secrétaire d'accueil en EHPAD</li>
-                </ul>    
-
-
-            <h3>Formations</h3>
-            <ul>
-                <li>2026 : Développeur web et web mobile (En cours)</li>
-            </ul>
-            <h3>Diplômes</h3>
-            <ul>
-                <li>2022 : Diplôme d'État d'Aide-soignante</li>
-                <li>2011 : Titre professionnel Secrétaire médicale</li>
-                <li>2009 : Baccalauréat professionnel Secrétariat</li>
+            <div class="escalier-experiences">
+                <div class="marche m1">
+                    <span class="annee">2025</span>
+                    <p><strong>ECONOME EN MECS</strong> - Association médico-social</p>
+                </div>
+                <div class="marche m2">
+                    <span class="annee">2024</span>
+                    <p><strong>SECRETAIRE DES RESSOURCES HUMAINES EN MECS</strong> - Association médico-social</p>
+                </div>
+                <div class="marche m3">
+                    <span class="annee">2024</span>
+                    <p><strong>AIDE-SOIGNANTE</strong> - MAS</p>
+                </div>
+                <div class="marche m4">
+                    <span class="annee">2022-2023</span>
+                    <p><strong>SECRETAIRE</strong> - Secteur médico-social</p>
+                </div>
+                <div class="marche m5">
+                    <span class="annee">2022</span>
+                    <p><strong>AIDE-SOIGNANTE</strong> - Mission d'intérim et vacation (Hôpitaux, Clinique, Ehpad, Mas)</p>
+                </div>
+                <div class="marche m6"> 
+                    <span class="annee">2007-2021</span>
+                    <p><strong>SECRETAIRE D'ACCUEIL</strong> - EHPAD</p>
+                </div>
+            </div>
                 
-                
-            </ul>
-        </div>
+            <h2>Diplômes et Formations</h2>
+            <div class="escalier-diplomes">
+                <div class="marche m1">
+                    <span class="annee">2026</span>
+                    <p><strong>Formation développeuse web et web mobile (en cours)</strong> - Centre de formation à distance</p>
+                </div>
+                <div class="marche m2">
+                    <span class="annee">2021-2022</span>
+                    <p><strong>Diplôme d'Etat d'Aide-soignante</strong></p>
+                </div>
+                <div class="marche m3">
+                    <span class="annee">2007-2009</span>
+                    <p><strong>Diplôme de Secrétaire Médicale</strong></p>
+                </div>
+                <div class="marche m4">
+                    <span class="annee">2007-2009</span>
+                    <p><strong>Baccalauréat professionnel Secrétariat</strong></p>
+                </div>
+                <div class="marche m5">
+                    <span class="annee">2005-2007</span>
+                    <p><strong>BEP Secrétariat</strong></p>
+                </div>
+            </div>
+        </section>
 
-        <div id="softskills" class="fiche-dossier">
-            <button class="intercalaire" data-tab="softskills">Soft skills</button>
-            <h2>Soft skills</h2>
-            <ul>
-                <li>Gestion du stress et adaptabilité - Gestion de projets, respect des deadlines</li>
-                <li>Rigueur et sens de l'organisation - Ecoute et travail en équipe</li>
-                <li>Résilicience et résolution de problèmes - Bugs et imprévus</li>
-                <li>Esprit d'équipe et communication transversale - </li>
-                <li>Empathie et sens du service</li>
-                <li>Curiosité et autonomie</li>
-                
-            </ul>
-        </div>
-
-        <div id="projets" class="fiche-dossier">
-            <button class="intercalaire" data-tab="projets">Projets à venir</button>
+        <!-- SECTION : SOFT SKILLS -->
+        <section id="softskills" class="fiche-dossier" role="tabpanel" aria-labelledby="tab-softskills" hidden>
+            <h2>Mon profil</h2>
             
-            <h2>Planning interactif</h2>
-            <p>Automatisation de la gestion des absences et des présences des salariés au sein d'un établissement.</p>
-            
-            <h2>Formulaire automatique</h2>
-            <p>Simplification des accès aux données des salariés. Ce projet me permettra de mettre en pratique mes compétences en développement web et en gestion de base de données.</p>
-        </div>  
+            <p class="texte-introduction">
+                Au fil des années, j'ai développé plusieurs compétences transversales, grâce notamment à mon expérience dans le secteur administratif, le secteur du médical et désormais l'apprentissage du numérique. </p>
+            <p class="texte-introduction" style="margin-bottom: 40px;">
+                Voici les principales compétences que j'ai acquises et qui me seront utiles dans ma carrière : </p> 
+              
+            <div class="liste-softskills-container">
+                <div class="softskills">Empathie et écoute</div>
+                <div class="softskills">Gestion du stress</div>
+                <div class="softskills">Résolution de problèmes</div>
+                <div class="softskills">Rigueur et organisation</div>
+                <div class="softskills">Gestion de projet et travail en équipe</div>
+            </div>
+        </section>
 
-    </div> <footer>
-        <h2>Contact</h2>
-        <p>Vous souhaitez échanger sur mon profil ou me proposer une alternance ? Contacte-moi par email :</p>
-        <p><a href="mailto:ton.adresse@email.com">ton.adresse@email.com</a></p>   
-    </footer>
-    <script src="script.js"></script>
+        <!-- SECTION : PROJETS -->
+        <section id="projets" class="fiche-dossier" role="tabpanel" aria-labelledby="tab-projets" hidden>
+            <div class="projets-centralises">
+                <h2>Réalisations en cours</h2>
+                
+                <div class="liste-projets"> 
+                    <article class="bloc-projet-simple">
+                        <h3>📅 Planning Interactif</h3>
+                        <p>Automatisation de la gestion des absences et des présences des salariés.</p>
+                    </article> 
+
+                    <article class="bloc-projet-simple">
+                        <h3>📝 Formulaire Automatique</h3>
+                        <p>Simplification des accès aux données des salariés et gestion de base de données sécurisée.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </div> 
+</main> 
+<!-- SECTION : FOOTER -->
+<footer>
+    <h2>Contact</h2>
+    <address>
+
+        <p>Contactez-moi par email :</p> 
+       <form action="https://formsubmit.co/8847f05f74475cc1ac547d38cb920c99" method="POST" class="mini-form">
+    <input type="text" name="name" placeholder="Nom / Entreprise" required>
+    <input type="email" name="email" placeholder="Votre Email" required>
+    <textarea name="message" placeholder="Votre Message" required></textarea>
+    <button type="submit">Envoyer</button>
+</form>
+    </address>
+</footer>
+
+<script src="script.js"></script>
 </body>
-</html> 
+</html>
