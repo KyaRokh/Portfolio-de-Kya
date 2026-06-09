@@ -1,4 +1,4 @@
-/* 1. POLICES & CONFIGURATION GLOBALE */
+/* 1. POLICES & CONFIGURATION */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght=400;500&family=Space+Grotesk:wght=700&display=swap');
 
 body {
@@ -16,27 +16,26 @@ header {
     margin: 40px 0 20px 0;
 }
 
-h1.header-slogan {
+/* Polices Titres */
+h1.header-slogan, h2, h3, .intercalaire {
     font-family: 'Space Grotesk', sans-serif;
     color: black;
+}
+
+h1.header-slogan {
     font-size: 36px;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0;
 }
 
-/* Polices */
-h2, h3, .intercalaire {
-    font-family: 'Space Grotesk', sans-serif;
-    color: black;
-}
-
-p, table, .marche p, footer {
+/* Polices Textes */
+p, table, .marche p, footer, .mini-form input, .mini-form textarea, .mini-form button {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
 }
 
-/* Cadres néo-brutalistes */
+/* Cadres */
 .dossier-contenu, .intercalaire, .marche {
     border: 2px solid black;
 }
@@ -54,6 +53,7 @@ p, table, .marche p, footer {
     grid-template-columns: 1fr;
     background-color: white;
     border-radius: 0 12px 12px 12px;
+    overflow: hidden;
     box-shadow: 6px 6px 0px black;
     z-index: 2;
     position: relative;
@@ -81,7 +81,7 @@ p, table, .marche p, footer {
     font-size: 28px; 
     text-align: center; 
     text-decoration: underline; 
-    text-underline-offset: 5px;s
+    text-underline-offset: 5px;
     margin-bottom: 35px;
 }
 
@@ -130,7 +130,12 @@ p, table, .marche p, footer {
 }
 
 .intercalaire:active { transform: translateY(1px); }
-.intercalaire:focus-visible { outline: 3px dashed black; outline-offset: 2px; }
+
+.intercalaire:focus-visible { 
+    outline: none;
+    outline: 3px dashed black; 
+    outline-offset: 2px; 
+}
 
 /* Couleurs des onglets */
 .intercalaire[data-tab="presentation"] { background-color: #fbfba8; }
@@ -152,9 +157,9 @@ p, table, .marche p, footer {
 .intercalaire.active[data-tab="softskills"]   { background-color: #fba8a8; }
 .intercalaire.active[data-tab="projets"]      { background-color: #dfa8fb; }
 
-/* 4. PAGES INTERNES (MISES EN PAGE SPÉCIFIQUES) */
+/* 4. PAGES INTERNES */
 
-/* --- Tableau --- */
+/* Tableau */
 .tableau-competences {
     width: 100%;
     border-collapse: collapse;
@@ -169,7 +174,7 @@ p, table, .marche p, footer {
     background-color: #a8defb;
 }
 
-/* --- Escalier --- */
+/* Escalier */
 .escalier-experiences, .escalier-diplomes {
     display: flex;
     flex-direction: column;
@@ -192,7 +197,6 @@ p, table, .marche p, footer {
 .annee { font-weight: bold; color: purple; min-width: 90px; }
 .marche p { margin: 0; font-size: 14px; text-align: center; }
 
-/* Décalages progressifs des escaliers : */
 .m1 { margin-left: -25%; }
 .m2 { margin-left: -15%; }
 .m3 { margin-left: -5%; }
@@ -200,10 +204,14 @@ p, table, .marche p, footer {
 .m5 { margin-left: 15%; }
 .m6 { margin-left: 25%; } 
 
-/* --- Page Soft Skills  --- */
+/* Page Soft Skills */
 .texte-introduction {
     max-width: 90%;
     margin: 0 auto 15px auto;
+}
+
+.texte-introduction:last-of-type {
+    margin-bottom: 40px;
 }
 
 .liste-softskills-container {
@@ -234,7 +242,7 @@ p, table, .marche p, footer {
     background-color: #f9f9f9; 
 }
 
-/* --- Page Projets --- */
+/* Page Projets */
 .projets-centralises {
     max-width: 90%;
     margin: 0 auto;
@@ -244,10 +252,10 @@ p, table, .marche p, footer {
 }
 .bloc-projet-simple p { font-size: 16px; margin-top: 0; }
 
-/* 5. CONFIGURATION DU FOOTER & FORMULAIRE */
+/* 5. FOOTER & FORMULAIRE */
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px; 
     padding: 20px;
 }
 
@@ -263,7 +271,6 @@ footer {
     padding: 10px;
     border-radius: 4px;
     border: 2px solid black; 
-    font-family: 'Inter', sans-serif;
 }
 
 .mini-form button {
@@ -309,5 +316,12 @@ footer {
     .tableau-competences {
         display: block;
         overflow-x: auto; 
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
